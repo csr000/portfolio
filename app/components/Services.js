@@ -5,6 +5,7 @@ import { BsArrowUpRight } from "react-icons/bs";
 import { motion } from "framer-motion";
 //variants
 import { fadeIn } from "../variants";
+import Link from "next/link";
 
 //services data
 const services = [
@@ -50,7 +51,9 @@ const Services = () => {
               I am a Freelance Front-end Developer with over 5 years of
               experience.
             </h3>
+            <Link href="/projects">
             <button className="btn btn-sm">See my work</button>
+            </Link>
           </motion.div>
           {/* services */}
           <motion.div
