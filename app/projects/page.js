@@ -1,9 +1,23 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import ProjectCard from "../components/ProjectCard";
 import ToggleGroup from "../components/ToggleGroup";
+import { client } from "@/sanity/lib/client";
 
 function Projects() {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const res = await client.fetch('*[_type == "post"]');
+      setProjects(res);
+    };
+    fetchProjects();
+  }, []);
+  
+  console.log("projects", projects)
+  // console.log(data);
   return (
     <>
       <div className="flex justify-center">
@@ -11,25 +25,8 @@ function Projects() {
       </div>
       <div className="container mx-auto">
         <div className="flex flex-wrap justify-between items-center">
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          {projects &&
+            projects.map((i, key) => <ProjectCard key={key} project={i} />)}
         </div>
       </div>
     </>

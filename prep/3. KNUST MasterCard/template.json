@@ -1,0 +1,8 @@
+{
+  "image": "true",
+  "name": "KNUST MasterCard Collab",
+  "desc": "A website constructed using the Django framework.",
+  "category": "Webapp",
+  "github": "https://github.com/csr000/mcf_knust_edu_gh_rebuild",
+  "deployed?": ""
+}

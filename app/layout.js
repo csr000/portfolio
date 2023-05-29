@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
 
       <body>
         <div className="bg-site bg-no-repeat bg-cover overflow-hidden min-h-screen">
-          <Header />
+          {/* <Header /> */}
           {children}
         </div>
       </body>

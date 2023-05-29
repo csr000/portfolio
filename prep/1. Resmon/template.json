@@ -1,0 +1,8 @@
+{
+  "image": "true",
+  "name": "ResMon",
+  "desc": "ResMon provides real-time resource monitoring, enabling users to track CPU & memory effortlessly",
+  "category": "Desktop app",
+  "github": "https://github.com/csr000/resource-monitor",
+  "deployed?": "https://github.com/csr000/resource-monitor/releases/tag/v1.0.0"
+}

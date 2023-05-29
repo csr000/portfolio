@@ -1,0 +1,8 @@
+{
+  "image": "true",
+  "name": "ThirdNerds",
+  "desc": "An online bootcamp web application designed to revolutionize the way individuals learn and enhance their skills.",
+  "category": "Webapp",
+  "github": "",
+  "deployed?": "https://thirdnerds.vercel.app/"
+}

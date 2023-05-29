@@ -1,0 +1,8 @@
+{
+  "image": "true",
+  "name": "Student's Booking System (KNUST)",
+  "desc": "A web application designed to streamline the process of booking appointments and managing schedules for students constructed using the Django framework.",
+  "category": "Webapp",
+  "github": "https://github.com/csr000/knust-booking-system",
+  "deployed?": ""
+}

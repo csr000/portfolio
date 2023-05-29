@@ -6,11 +6,8 @@ import About from "./components/About";
 import Services from "./components/Services";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
-import { client } from "@/sanity/lib/client";
 
 const App = async () => {
-  const data = await client.fetch("*");
-  console.log({data});
   return (
     <>
       <Banner />
@@ -25,3 +22,4 @@ const App = async () => {
 };
 
 export default App;
+
