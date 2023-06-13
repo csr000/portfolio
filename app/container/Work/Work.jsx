@@ -5,10 +5,10 @@ import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
-// import { urlFor, client } from '../../client';
 import { client } from '@/sanity/lib/client';
 
 import './Work.scss';
+import { urlForImage } from '@/sanity/lib/image';
 
 const Work = () => {
   const [works, setWorks] = useState([]);
@@ -66,7 +66,7 @@ const Work = () => {
             <div
               className="app__work-img app__flex"
             >
-              <img src={urlFor(work.imgUrl)} alt={work.name} />
+              <img src={urlForImage(work.imgUrl).url()} alt={work.name} />
 
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
