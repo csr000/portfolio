@@ -1,14 +1,15 @@
-"use client"
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import ReactTooltip from 'react-tooltip';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import ReactTooltip from "react-tooltip";
 
-import { AppWrap, MotionWrap } from '../../wrapper';
-import { client } from '@/sanity/lib/client';
+import { AppWrap, MotionWrap } from "../../wrapper";
+import { client } from "@/sanity/lib/client";
 
-import './Skills.scss';
-import { urlForImage } from '@/sanity/lib/image';
+import "./Skills.scss";
+import { urlForImage } from "@/sanity/lib/image";
+import Image from "next/image";
 
 const Skills = () => {
   const [experiences, setExperiences] = useState([]);
@@ -44,13 +45,21 @@ const Skills = () => {
                 className="app__flex"
                 style={{ backgroundColor: skill.bgColor }}
               >
-                <img src={urlForImage(skill.icon).url()} alt={skill.name} />
+                <Image
+                  src={urlForImage(skill.icon).url()}
+                  alt={skill.name}
+                  // sizes="100vw"
+                  width={200}
+                  height={100}
+                  // style={{ width: '100%', height: 50 }} // optional
+
+                />
               </div>
               <p className="p-text">{skill.name}</p>
             </motion.div>
           ))}
         </motion.div>
-        <div className="app__skills-exp">
+        {/* <div className="app__skills-exp">
           {experiences.map((experience) => (
             <motion.div
               className="app__skills-exp-item"
@@ -86,14 +95,14 @@ const Skills = () => {
               </motion.div>
             </motion.div>
           ))}
-        </div>
+        </div> */}
       </div>
     </>
   );
 };
 
 export default AppWrap(
-  MotionWrap(Skills, 'app__skills'),
-  'skills',
-  'app__whitebg',
+  MotionWrap(Skills, "app__skills"),
+  "skills",
+  "app__whitebg"
 );

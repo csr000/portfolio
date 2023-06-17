@@ -32,7 +32,11 @@ export default {
           hotspot: true,
         },
       },
-   
+      {
+        name: 'technologies',
+        title: 'Technologies',
+        type: 'string',
+      },
       {
         name: 'tags',
         title: 'Tags',

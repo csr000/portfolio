@@ -48,7 +48,7 @@
 
   @media screen and (max-width: 1200px) {
     width: 100%;
-    margin-right: 0rem;
+    // margin-right: 0rem;
   }
 }
 
@@ -170,12 +170,14 @@
   height: 100%;
 
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   position: relative;
 
+  padding-top: 5%;
+
   img {
-    width: 100%;
+    width: 80%;
     object-fit: contain;
     z-index: 1;
   }
@@ -192,5 +194,6 @@
 
   @media screen and (max-width: 1200px) {
     margin: 2rem 0;
+    padding-top: 8%;
   }
 }

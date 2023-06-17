@@ -1,0 +1,1 @@
+A project that utilizes cutting-edge technology to help you analyze resumes and extract valuable information such as skills, work experience, and other key details that can help you make better hiring decisions. With HireSmart, you can streamline your recruitment process and find the best candidates in no time.
