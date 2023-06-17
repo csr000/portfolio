@@ -38,6 +38,11 @@ export default {
         type: 'string',
       },
       {
+        name: 'priority',
+        title: 'Priority',
+        type: 'number',
+      },
+      {
         name: 'tags',
         title: 'Tags',
        type:'array',

@@ -17,7 +17,7 @@ const Work = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   useEffect(() => {
-    const query = '*[_type == "works"]';
+    const query = '*[_type == "works"] | order(priority asc)';
 
     client.fetch(query).then((data) => {
       setWorks(data);
@@ -42,11 +42,11 @@ const Work = () => {
 
   return (
     <>
-      <h2 className="head-text">
+      <h2 className="head-text" style={{ marginBottom: 20 }}>
         My Creative <span>Portfolio</span> Section
       </h2>
 
-      <div className="app__work-filter">
+      {/* <div className="app__work-filter">
         {["UI/UX", "Web App", "Mobile App", "React JS", "All"].map(
           (item, index) => (
             <div
@@ -60,7 +60,7 @@ const Work = () => {
             </div>
           )
         )}
-      </div>
+      </div> */}
 
       <motion.div
         animate={animateCard}
